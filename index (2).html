@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--
+  index.html - the STRUCTURE (skeleton) of the portfolio.
+  style.css  - the LOOK (colors, layout, animations).
+  script.js  - the BEHAVIOR (menu, typing effect, form checks).
+  Keep all three files in the same folder.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Abdul Manan, B.Tech Cyber Security student at UET Taxila, Pakistan." />
+  <title>Abdul Manan | Cyber Security Student</title>
+
+  <!-- Connect the CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============ HEADER / NAVIGATION ============ -->
+  <header class="site-header" id="header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="#home" class="logo">
+        <span class="logo-bracket">&lt;</span>AM<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Hamburger button (visible on small screens only) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ 1. HOME ============ -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-text">
+          <p class="hero-tag">&gt; Hello, world. I am</p>
+          <h1 class="hero-name">Abdul Manan</h1>
+          <p class="hero-role">
+            <span id="typedText"></span><span class="cursor">|</span>
+          </p>
+          <h2 class="hero-heading">Securing the Digital World, One Step at a Time.</h2>
+          <p class="hero-sub">
+            B.Tech Cyber Security student at the University of Engineering and Technology, Taxila,
+            building strong foundations in security, networking and ethical hacking.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
+
+        <!-- Cybersecurity visual: an SVG shield + a fake terminal window -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="shield-wrap">
+            <svg class="shield" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="shieldGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#00ff9c" />
+                  <stop offset="100%" stop-color="#00b4ff" />
+                </linearGradient>
+              </defs>
+              <path d="M100 10 L180 40 V110 C180 165 145 205 100 230 C55 205 20 165 20 110 V40 Z"
+                    fill="rgba(0,255,156,0.06)" stroke="url(#shieldGrad)" stroke-width="3" />
+              <!-- Padlock -->
+              <rect x="72" y="100" width="56" height="48" rx="8" fill="none" stroke="url(#shieldGrad)" stroke-width="3" />
+              <path d="M82 100 V86 a18 18 0 0 1 36 0 V100" fill="none" stroke="url(#shieldGrad)" stroke-width="3" />
+              <circle cx="100" cy="124" r="5" fill="#00ff9c" />
+              <line x1="100" y1="128" x2="100" y2="138" stroke="#00ff9c" stroke-width="3" />
+            </svg>
+            <span class="ring ring-1"></span>
+            <span class="ring ring-2"></span>
+          </div>
+
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="terminal-title">manan@secure:~</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> whoami</p>
+              <p class="out">abdul-manan</p>
+              <p><span class="prompt">$</span> status</p>
+              <p class="out">learning... securing... improving...</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <a href="#about" class="scroll-down" aria-label="Scroll to About section">&#8595;</a>
+    </section>
+
+    <!-- ============ 2. ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title reveal"><span>01.</span> About Me</h2>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I am <strong>Abdul Manan</strong>, a B.Tech Cyber Security student at the
+              <strong>University of Engineering and Technology (UET), Taxila, Pakistan</strong>.
+              I am at the beginning of my journey and I enjoy learning how systems work,
+              how they can be attacked, and most importantly, how they can be protected.
+            </p>
+            <p>
+              My goal is to build a strong foundation in security fundamentals, practice
+              regularly with hands-on exercises, and grow into a responsible and skilled
+              security professional.
+            </p>
+            <p class="level-note">Experience level: <span>Beginner</span> &mdash; always learning.</p>
+          </div>
+
+          <div class="about-cards reveal">
+            <article class="interest-card">
+              <div class="icon">&#128737;</div>
+              <h3>Ethical Hacking</h3>
+              <p>Learning how to find weaknesses legally and responsibly.</p>
+            </article>
+            <article class="interest-card">
+              <div class="icon">&#127760;</div>
+              <h3>Network Security</h3>
+              <p>Understanding how data travels and how to protect it.</p>
+            </article>
+            <article class="interest-card">
+              <div class="icon">&#128274;</div>
+              <h3>Information Security</h3>
+              <p>Protecting data with confidentiality, integrity and availability.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. SKILLS ============ -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal"><span>02.</span> Skills</h2>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <h3>HTML, CSS &amp; JavaScript</h3>
+            <span class="badge badge-learning">Learning</span>
+          </article>
+          <article class="skill-card reveal">
+            <h3>C++ Programming</h3>
+            <span class="badge">Core Skill</span>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Computer Networking</h3>
+            <span class="badge">Core Skill</span>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Cyber Security Fundamentals</h3>
+            <span class="badge">Core Skill</span>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Linux Fundamentals</h3>
+            <span class="badge">Core Skill</span>
+          </article>
+          <article class="skill-card reveal">
+            <h3>Ethical Hacking</h3>
+            <span class="badge badge-learning">Learning</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. PROJECTS ============ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title reveal"><span>03.</span> Projects</h2>
+        <p class="section-note reveal">
+          The projects below are <strong>sample practice projects</strong> that show what I am learning.
+          They will be replaced with real work as I build it.
+        </p>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <span class="badge badge-practice">Practice Project</span>
+            <h3>Network Security Analysis</h3>
+            <p>A beginner study of basic network traffic, common protocols and simple ways to spot suspicious activity.</p>
+            <ul class="tags"><li>Networking</li><li>Security</li></ul>
+            <a href="#contact" class="card-link">Ask about this &rarr;</a>
+          </article>
+
+          <article class="project-card reveal">
+            <span class="badge badge-practice">Practice Project</span>
+            <h3>Password Strength Checker</h3>
+            <p>A small tool idea that checks a password's length and character variety and gives tips to make it stronger.</p>
+            <ul class="tags"><li>C++</li><li>JavaScript</li></ul>
+            <a href="#contact" class="card-link">Ask about this &rarr;</a>
+          </article>
+
+          <article class="project-card reveal">
+            <span class="badge badge-practice">Practice Project</span>
+            <h3>Python Security Tools</h3>
+            <p>A collection of simple learning scripts for safe, legal practice such as file hashing and text analysis.</p>
+            <ul class="tags"><li>Python</li><li>Automation</li></ul>
+            <a href="#contact" class="card-link">Ask about this &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. CERTIFICATIONS ============ -->
+    <section id="certifications" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal"><span>04.</span> Certifications</h2>
+
+        <div class="cert-box reveal">
+          <div class="icon big">&#127891;</div>
+          <h3>Future Certifications</h3>
+          <p>
+            I have not earned any professional certifications yet. This section is reserved
+            for the certifications I plan to earn as I grow. It will be updated honestly
+            once I complete them.
+          </p>
+          <span class="badge badge-learning">Coming Soon</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title reveal"><span>05.</span> Contact</h2>
+
+        <div class="contact-grid">
+
+          <div class="contact-info reveal">
+            <p>
+              Have a question, a learning tip, or an opportunity? I would love to hear from you.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <span class="label">Email</span>
+                <!-- TODO: replace with your real email -->
+                <a href="mailto:your.email@example.com">your.email@example.com</a>
+              </li>
+              <li>
+                <span class="label">GitHub</span>
+                <!-- TODO: replace with your real GitHub link -->
+                <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">github.com/your-username</a>
+              </li>
+              <li>
+                <span class="label">LinkedIn</span>
+                <!-- TODO: replace with your real LinkedIn link -->
+                <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer">linkedin.com/in/your-username</a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+              <small class="error" id="nameError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              <small class="error" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+              <small class="error" id="messageError"></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Abdul Manan &bull; B.Tech Cyber Security, UET Taxila</p>
+      <a href="#home" class="to-top">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <!-- Connect the JavaScript file (at the end so the page loads first) -->
+  <script src="script.js"></script>
+</body>
+</html>
